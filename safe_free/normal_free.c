@@ -9,25 +9,25 @@
  */
 int main(void)
 {
-	char *line = malloc(sizeof("Hello, world!"));
+	char *str = malloc(sizeof("Hello, world!"));
 
-	strcpy(line, "Hello, world!");
+	strcpy(str, "Hello, world!");
 
 	/* print the result */
-	printf("Output: %s\n", line);
+	printf("Output: %s\n", str);
 
-	printf("Address before free [%p]\n", (void *)line);
+	printf("Address before free [%p]\n", (void *)str);
 
-	free(line);
+	free(str);
 
-	printf("Address after  free [%p]\n", (void *)line);
+	printf("Address after  free [%p]\n", (void *)str);
 	/*
 	 * this will cause double free error since the memory has been previously
 	 * deallocated and we are trying to free again. This is because the
 	 * original 'free' function doesn't check the validity of the pointer
 	 * passed to it before freeing it.
 	 */
-	free(line);
+	free(str);
 
 	return (0);
 }
