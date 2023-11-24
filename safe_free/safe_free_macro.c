@@ -20,7 +20,7 @@
  * behavior and avoid undefined behavior when attempting to free an already
  * freed memory block.
  *
- * Example usage: `_free(&my_pointer);`
+ * Example usage: `_free((void **)&my_pointer);`
  */
 void _free(void **ptr)
 {
