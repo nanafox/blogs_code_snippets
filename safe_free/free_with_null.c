@@ -28,7 +28,7 @@ int main(void)
 	 */
 	str = NULL;
 
-	printf("Address before free [%p]\n", (void *)str);
+	printf("Address after  free [%p]\n", (void *)str);
 
 	/*
 	 * this won't cause a double free error because the pointer is already NULL
