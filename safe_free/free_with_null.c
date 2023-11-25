@@ -17,6 +17,7 @@ int main(void)
 	printf("Output: %s\n", str);
 
 	printf("Address before free [%p]\n", (void *)str);
+
 	free(str);
 
 	/*

@@ -57,9 +57,10 @@ int main(void)
 	 * pointed by the pointer we give it hasn't been released yet.
 	 */
 	_free((void **)&str);
-	_free((void **)&str);
 
 	printf("Address after  _free [%p]\n", (void *)str);
+
+	_free((void **)&str);
 
 	return (0);
 }

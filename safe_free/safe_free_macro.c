@@ -60,9 +60,10 @@ int main(void)
 	 * pointed by the pointer we give it hasn't been released yet.
 	 */
 	safe_free(str);
-	safe_free(str);
 
 	printf("Address after  safe_free [%p]\n", (void *)str);
+
+	safe_free(str);
 
 	return (0);
 }
